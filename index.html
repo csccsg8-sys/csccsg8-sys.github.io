@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Site.Title }}</title>
+    <title>智能生活圈 - AI驱动新生活</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -18,11 +18,7 @@
             --shadow: 0 4px 20px rgba(30, 136, 229, 0.1);
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -31,7 +27,6 @@
             line-height: 1.6;
         }
         
-        /* Header */
         header {
             background: var(--white);
             box-shadow: var(--shadow);
@@ -58,15 +53,9 @@
             color: var(--accent);
         }
         
-        .logo-icon {
-            font-size: 1.7rem;
-        }
+        .logo-icon { font-size: 1.7rem; }
         
-        nav ul {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
+        nav ul { display: flex; gap: 2rem; list-style: none; }
         
         nav a {
             text-decoration: none;
@@ -82,147 +71,102 @@
             background: var(--primary-bg);
         }
         
-        /* Hero */
         .hero {
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
             color: var(--white);
-            padding: 4rem 2rem;
+            padding: 3rem 2rem;
             text-align: center;
         }
         
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
+        .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .hero p { font-size: 1.1rem; opacity: 0.9; }
+        .hero .wechat-hint { margin-top: 1rem; font-size: 0.95rem; opacity: 0.85; }
         
-        .hero p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        /* Main */
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
+        main { max-width: 900px; margin: 0 auto; padding: 2rem; }
         
         .section-title {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: var(--text-dark);
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
             border-bottom: 3px solid var(--accent);
             display: inline-block;
         }
         
-        /* Tools Grid */
-        .tools-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .tool-card {
+        .post-card {
             background: var(--card-bg);
             border-radius: 16px;
             padding: 1.5rem;
+            margin-bottom: 1.2rem;
             box-shadow: var(--shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease;
             border: 1px solid rgba(30, 136, 229, 0.1);
         }
         
-        .tool-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 30px rgba(30, 136, 229, 0.2);
+        .post-card:hover {
+            transform: translateX(5px);
+            border-left: 4px solid var(--accent);
         }
         
-        .tool-icon {
-            font-size: 2rem;
-            margin-bottom: 0.8rem;
-        }
-        
-        .tool-name {
+        .post-title {
             font-size: 1.2rem;
             font-weight: 600;
-            color: var(--accent);
+            color: var(--text-dark);
             margin-bottom: 0.5rem;
         }
         
-        .tool-desc {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
-        
-        .tool-link {
-            display: inline-block;
-            background: var(--accent);
-            color: var(--white);
-            padding: 0.5rem 1.2rem;
-            border-radius: 8px;
+        .post-title a {
             text-decoration: none;
-            font-weight: 500;
-            transition: background 0.3s ease;
+            color: inherit;
         }
         
-        .tool-link:hover {
-            background: var(--accent-dark);
-        }
+        .post-title a:hover { color: var(--accent); }
         
-        /* Category Tags */
-        .category-tag {
-            display: inline-block;
-            background: var(--primary-bg);
-            color: var(--accent);
-            padding: 0.2rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
+        .post-desc {
+            color: var(--text-light);
+            font-size: 0.9rem;
             margin-bottom: 0.8rem;
         }
         
-        /* Footer */
+        .read-more {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--white);
+            padding: 0.4rem 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+            transition: background 0.3s ease;
+        }
+        
+        .read-more:hover { background: var(--accent-dark); }
+        
+        .wechat-follow {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: var(--white);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        .wechat-follow h3 { margin-bottom: 0.5rem; font-size: 1.1rem; }
+        .wechat-follow p { opacity: 0.9; font-size: 0.95rem; }
+        
         footer {
             background: var(--text-dark);
             color: var(--white);
             text-align: center;
             padding: 2rem;
-            margin-top: 3rem;
+            margin-top: 2rem;
         }
         
-        footer p {
-            opacity: 0.8;
-        }
+        footer p { opacity: 0.8; }
         
-        /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        /* Responsive */
         @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1rem;
-            }
-            
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            
-            .tools-grid {
-                grid-template-columns: 1fr;
-            }
+            .header-container { flex-direction: column; gap: 1rem; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 1rem; }
         }
     </style>
 </head>
@@ -237,7 +181,6 @@
                 <ul>
                     <li><a href="/" class="active">首页</a></li>
                     <li><a href="/ai-tools.html">AI工具导航</a></li>
-                    <li><a href="/posts.html">AI教程</a></li>
                     <li><a href="/about.html">关于我们</a></li>
                 </ul>
             </nav>
@@ -245,81 +188,266 @@
     </header>
     
     <section class="hero">
-        <h1>Smart Life Circle</h1>
-        <p>发现最新AI工具，提升工作与生活效率</p>
+        <h1>📱 智能生活圈</h1>
+        <p>分享AI工具与生活智慧，让科技服务美好生活</p>
+        <div class="wechat-hint">关注公众号「AI驱动新生活」获取更多精彩内容</div>
     </section>
     
     <main>
-        <h2 class="section-title">🔥 AI工具导航</h2>
-        <div class="tools-grid">
-            <div class="tool-card">
-                <span class="category-tag">对话助手</span>
-                <div class="tool-icon">🤖</div>
-                <div class="tool-name">ChatGPT</div>
-                <div class="tool-desc">OpenAI开发的AI对话助手，支持多轮对话、代码编写、文章创作</div>
-                <a href="https://chat.openai.com" target="_blank" class="tool-link">前往体验 →</a>
-            </div>
-            
-            <div class="tool-card">
-                <span class="category-tag">对话助手</span>
-                <div class="tool-icon">💬</div>
-                <div class="tool-name">Claude</div>
-                <div class="tool-desc">Anthropic开发的AI助手，擅长分析、写作、长文本处理</div>
-                <a href="https://claude.ai" target="_blank" class="tool-link">前往体验 →</a>
-            </div>
-            
-            <div class="tool-card">
-                <span class="category-tag">图像生成</span>
-                <div class="tool-icon">🎨</div>
-                <div class="tool-name">Midjourney</div>
-                <div class="tool-desc">强大的AI图像生成工具，输入文字描述即可生成精美图片</div>
-                <a href="https://www.midjourney.com" target="_blank" class="tool-link">前往体验 →</a>
-            </div>
-            
-            <div class="tool-card">
-                <span class="category-tag">图像生成</span>
-                <div class="tool-icon">🖼️</div>
-                <div class="tool-name">Stable Diffusion</div>
-                <div class="tool-desc">开源AI图像生成模型，支持本地部署和自定义训练</div>
-                <a href="https://stability.ai" target="_blank" class="tool-link">前往体验 →</a>
-            </div>
-            
-            <div class="tool-card">
-                <span class="category-tag">办公辅助</span>
-                <div class="tool-icon">📄</div>
-                <div class="tool-name">Notion AI</div>
-                <div class="tool-desc">集成在Notion中的AI助手，帮你整理笔记、写文章、做总结</div>
-                <a href="https://notion.so" target="_blank" class="tool-link">前往体验 →</a>
-            </div>
-            
-            <div class="tool-card">
-                <span class="category-tag">办公辅助</span>
-                <div class="tool-icon">📊</div>
-                <div class="tool-name">Gamma</div>
-                <div class="tool-desc">AI演示文稿生成工具，输入大纲自动生成精美PPT</div>
-                <a href="https://gamma.app" target="_blank" class="tool-link">前往体验 →</a>
-            </div>
-            
-            <div class="tool-card">
-                <span class="category-tag">视频制作</span>
-                <div class="tool-icon">🎬</div>
-                <div class="tool-name">Runway</div>
-                <div class="tool-desc">AI视频编辑和生成平台，支持视频抠像、特效生成</div>
-                <a href="https://runwayml.com" target="_blank" class="tool-link">前往体验 →</a>
-            </div>
-            
-            <div class="tool-card">
-                <span class="category-tag">编程助手</span>
-                <div class="tool-icon">💻</div>
-                <div class="tool-name">GitHub Copilot</div>
-                <div class="tool-desc">AI代码补全助手，支持多种编程语言，提升编码效率</div>
-                <a href="https://github.com/features/copilot" target="_blank" class="tool-link">前往体验 →</a>
-            </div>
+        <div class="wechat-follow">
+            <h3>📱 点击文章阅读全文，支持公众号「AI驱动新生活」</h3>
+            <p>阅读量计入微信流量主，感谢您的支持！</p>
+        </div>
+        
+        <h2 class="section-title">📝 精选文章（40篇）</h2>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967865&idx=1&sn=fa31ffbfb0ecf764e19c4493dc1383a4&chksm=73ee408e4499c99838926107cdcbac446e41d9cdd86d57fc7fa5a13c4ea0f0114b8b6a49782a#rd" target="_blank">朋友圈发什么就缺什么</a></div>
+            <div class="post-desc">现如今，越来越多的人，更注重当下生活，更注重内心的满足，而不再频频发朋友圈...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967865&idx=1&sn=fa31ffbfb0ecf764e19c4493dc1383a4&chksm=73ee408e4499c99838926107cdcbac446e41d9cdd86d57fc7fa5a13c4ea0f0114b8b6a49782a#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967865&idx=2&sn=2a935d34dae808b2e3ed9a625e1709ea&chksm=73ee408e4499c99888127a247a8ea9474b38ba2d9756a5500cee77580625f05e2d0734228fc4#rd" target="_blank">不要同三观不合的人相处</a></div>
+            <div class="post-desc">三观不合的人，志趣不同，见解有异，永远不在一个频率上...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967865&idx=2&sn=2a935d34dae808b2e3ed9a625e1709ea&chksm=73ee408e4499c99888127a247a8ea9474b38ba2d9756a5500cee77580625f05e2d0734228fc4#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967865&idx=3&sn=5bbd8370463d9810a61bdc6bd15acd06&chksm=73ee408e4499c99822cb7909c14007b47a8b4b976b3ce2e0e59a763c42585860253bd8a99f30#rd" target="_blank">那条路都不会白走</a></div>
+            <div class="post-desc">世界上有一条很长很美的路，叫做梦想；还有一堵很高很硬的墙，叫做现实...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967865&idx=3&sn=5bbd8370463d9810a61bdc6bd15acd06&chksm=73ee408e4499c99822cb7909c14007b47a8b4b976b3ce2e0e59a763c42585860253bd8a99f30#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967865&idx=4&sn=8b69aafb6adcddf2da38963a3c3a48f7&chksm=73ee408e4499c998b6871bedf02e01925827eecce994c06c771ed6b7a5a6e712922abd3629d8#rd" target="_blank">和而不同你懂吗</a></div>
+            <div class="post-desc">想要建立长久的关系，维持亲密的感情，做好真实的自己，其实是一场漫长的修行...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967865&idx=4&sn=8b69aafb6adcddf2da38963a3c3a48f7&chksm=73ee408e4499c998b6871bedf02e01925827eecce994c06c771ed6b7a5a6e712922abd3629d8#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967842&idx=1&sn=1be7744978e50058c94260ea68f0d2e0&chksm=73ee40954499c983d773b04c42f1d0591f7d95c1f442934be12eb959fd0b03e32f007fcdd41f#rd" target="_blank">幸福指数</a></div>
+            <div class="post-desc">倘若我们能学会把幸福底线画得低一点，实在一点，离自己近一点...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967842&idx=1&sn=1be7744978e50058c94260ea68f0d2e0&chksm=73ee40954499c983d773b04c42f1d0591f7d95c1f442934be12eb959fd0b03e32f007fcdd41f#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967842&idx=2&sn=b4f8c253c44a784b23b8e5218a6e7ca9&chksm=73ee40954499c983d46aec585fa7ebf0d405745c5b1726f5cfd10cd6233cfa10cc665da1c68a#rd" target="_blank">雅量获得更多幸福生活</a></div>
+            <div class="post-desc">遗忘那些尘世的云烟，抖落那些人间的恩怨，好山好水好人生...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967842&idx=2&sn=b4f8c253c44a784b23b8e5218a6e7ca9&chksm=73ee40954499c983d46aec585fa7ebf0d405745c5b1726f5cfd10cd6233cfa10cc665da1c68a#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967842&idx=3&sn=cb642a70550ffc30759efd5e90bd1a9b&chksm=73ee40954499c983148ad0ce62e35a3034380df7495f3790b72c1ff67bf1b4d4e8d565239dca#rd" target="_blank">这样的夫妻生活真好</a></div>
+            <div class="post-desc">夫妻怄气是一把双刃剑，好夫妻何必非要争高低，退一步海阔天空...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967842&idx=3&sn=cb642a70550ffc30759efd5e90bd1a9b&chksm=73ee40954499c983148ad0ce62e35a3034380df7495f3790b72c1ff67bf1b4d4e8d565239dca#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967842&idx=4&sn=b6812a0fcf75ce1edf00785b62f1f620&chksm=73ee40954499c983b3e731d5e1a0e13470697fe54baae4362a91dd1fd159cce6d2c0017bb725#rd" target="_blank">妻子的漂亮取决于丈夫的性格</a></div>
+            <div class="post-desc">如果男人脾气暴燥，整日不是狂风暴雨，就是"零下一度"...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967842&idx=4&sn=b6812a0fcf75ce1edf00785b62f1f620&chksm=73ee40954499c983b3e731d5e1a0e13470697fe54baae4362a91dd1fd159cce6d2c0017bb725#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967813&idx=1&sn=1740565d8e75b94dfad5fb45958e7abf&chksm=73ee40b24499c9a4c9c8a2b77705e123af841662a46f1c531b011a3f8eeef86681cd239bef05#rd" target="_blank">和明白人说话，和踏实人做事</a></div>
+            <div class="post-desc">你有没有发现？我们生活中的绝大部分烦恼，都和他人有关...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967813&idx=1&sn=1740565d8e75b94dfad5fb45958e7abf&chksm=73ee40b24499c9a4c9c8a2b77705e123af841662a46f1c531b011a3f8eeef86681cd239bef05#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967813&idx=2&sn=1dc6a9a0585bed40bbfdbe7b3d3ed1c2&chksm=73ee40b24499c9a4ae29f57e8071d118e34b817d48e675c167fee4c0042c90f2dd176296faa9#rd" target="_blank">君子不自大其事，不自尚其功</a></div>
+            <div class="post-desc">也许平凡永远是生命的主流，但在这平凡的世界中，永远不缺与命运抗争的精神...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967813&idx=2&sn=1dc6a9a0585bed40bbfdbe7b3d3ed1c2&chksm=73ee40b24499c9a4ae29f57e8071d118e34b817d48e675c167fee4c0042c90f2dd176296faa9#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967813&idx=3&sn=1ac760ed2359074d915146efa57ad8cb&chksm=73ee40b24499c9a413ff823c2a90eb1c1c1f9bc476bec36c2213bc2240f97e8b4f73b831ac09#rd" target="_blank">远离这种人</a></div>
+            <div class="post-desc">董卿说：不管你是谁，请远离这两个人，否则这辈子你就完了！...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967813&idx=3&sn=1ac760ed2359074d915146efa57ad8cb&chksm=73ee40b24499c9a413ff823c2a90eb1c1c1f9bc476bec36c2213bc2240f97e8b4f73b831ac09#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967813&idx=4&sn=c3489ff91c4fc49b8068387b45cd3e0e&chksm=73ee40b24499c9a44fad736774042f9d99b0bcf6a8f7e8a6d4638827ed8882242bb08227898b#rd" target="_blank">奋斗</a></div>
+            <div class="post-desc">无法控制的事情，就控制好自己；无法左右的事情，就让心态平衡...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967813&idx=4&sn=c3489ff91c4fc49b8068387b45cd3e0e&chksm=73ee40b24499c9a44fad736774042f9d99b0bcf6a8f7e8a6d4638827ed8882242bb08227898b#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967785&idx=1&sn=9a52e91183e76707421d534db5ed5bc9&chksm=73ee40de4499c9c851e3b681d4c59f73ba65db23be00aa9a96a671b2693f7784563d77295f88#rd" target="_blank">中秋节快乐</a></div>
+            <div class="post-desc">友情如山，把关怀送给你；岁月如风，把快乐送给你...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967785&idx=1&sn=9a52e91183e76707421d534db5ed5bc9&chksm=73ee40de4499c9c851e3b681d4c59f73ba65db23be00aa9a96a671b2693f7784563d77295f88#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967785&idx=2&sn=fd4687d736dd2ceaa61a6aebd6d17ae1&chksm=73ee40de4499c9c88823fa3ece1d86d0668f681cda4e31eb5111e318b70cd2747157e252b657#rd" target="_blank">欲望过度是祸根</a></div>
+            <div class="post-desc">万恶淫为首，人一旦脱离了道德的底线，就是在自毁福报、自毁前程...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967785&idx=2&sn=fd4687d736dd2ceaa61a6aebd6d17ae1&chksm=73ee40de4499c9c88823fa3ece1d86d0668f681cda4e31eb5111e318b70cd2747157e252b657#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967785&idx=3&sn=d7220cc0e843ed6624edc3c0f63e1285&chksm=73ee40de4499c9c8ee0c7655f4add96626c07d13b0cc9063770311230bf4200c18532042a229#rd" target="_blank">把笑容带回家</a></div>
+            <div class="post-desc">生活就如同一面镜子，你对它哭，它也对你哭，如果你想要它对你微笑...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967785&idx=3&sn=d7220cc0e843ed6624edc3c0f63e1285&chksm=73ee40de4499c9c8ee0c7655f4add96626c07d13b0cc9063770311230bf4200c18532042a229#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967785&idx=4&sn=730181b32128cb0842974deb3b89c3a4&chksm=73ee40de4499c9c83a9c5e0c0647b3844237e301e2e683cf834cac1aed22894f6541649d140c#rd" target="_blank">请嘴上积德</a></div>
+            <div class="post-desc">不揭人伤疤，不指人痛处，留得住朋友，得到知己...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967785&idx=4&sn=730181b32128cb0842974deb3b89c3a4&chksm=73ee40de4499c9c83a9c5e0c0647b3844237e301e2e683cf834cac1aed22894f6541649d140c#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967759&idx=1&sn=3c57055633d4bb05ee478be1887fc60e&chksm=73ee40f84499c9ee63a29f88909ed27692e6e0e71f63f8df7d58b1848f6fc76c33f89a32818d#rd" target="_blank">这就是心术不正的人</a></div>
+            <div class="post-desc">心术不正的人，永远是抬高自己，贬低别人...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967759&idx=1&sn=3c57055633d4bb05ee478be1887fc60e&chksm=73ee40f84499c9ee63a29f88909ed27692e6e0e71f63f8df7d58b1848f6fc76c33f89a32818d#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967759&idx=2&sn=68565e832bbe82fe66d587cecd9e0219&chksm=73ee40f84499c9ee4350d75752500a2a639483c43cd11b6c89417b0ed380772428321a9d3df9#rd" target="_blank">人到中年这些东西不能丢</a></div>
+            <div class="post-desc">若是没有这笔安享晚年的积蓄，生活会有诸多不顺...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967759&idx=2&sn=68565e832bbe82fe66d587cecd9e0219&chksm=73ee40f84499c9ee4350d75752500a2a639483c43cd11b6c89417b0ed380772428321a9d3df9#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967759&idx=3&sn=2c714493fa0b9ce31a2a0ee0256f297a&chksm=73ee40f84499c9eeb5075ed9b8978f2a217e1ae25a6c2799d45f8faa4299e8b8e17fb85def27#rd" target="_blank">最美的遇见</a></div>
+            <div class="post-desc">无论你遇见谁，他都是你生命中该出现的人，命中注定...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967759&idx=3&sn=2c714493fa0b9ce31a2a0ee0256f297a&chksm=73ee40f84499c9eeb5075ed9b8978f2a217e1ae25a6c2799d45f8faa4299e8b8e17fb85def27#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967759&idx=4&sn=cdabd02b0eff1eec1c2c905b6eba618a&chksm=73ee40f84499c9ee3bbd4df9d2567aa12d2f7cd6b0fe671ead48fe42735d72f63812e5f38d3d#rd" target="_blank">愿你活的轻松活的漂亮</a></div>
+            <div class="post-desc">你我都知变老是不可避免的。但在变老的路上，有人活得疲惫...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967759&idx=4&sn=cdabd02b0eff1eec1c2c905b6eba618a&chksm=73ee40f84499c9ee3bbd4df9d2567aa12d2f7cd6b0fe671ead48fe42735d72f63812e5f38d3d#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967726&idx=1&sn=a67321ec15291bd842143f8b15b3c632&chksm=73ee40194499c90f8ca69d669bb39714467d664c7d083acd477d210cbd50b6bb2dcae4a21760#rd" target="_blank">学习...</a></div>
+            <div class="post-desc">男人的脾气影响他的事业，女人的脾气影响她的婚姻...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967726&idx=1&sn=a67321ec15291bd842143f8b15b3c632&chksm=73ee40194499c90f8ca69d669bb39714467d664c7d083acd477d210cbd50b6bb2dcae4a21760#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967726&idx=2&sn=63b83b49c1ee313079e7192429293aa0&chksm=73ee40194499c90f9ffa825e9de865e01e40080247e742a3ddee2de6ff76d34ebd64aa456bc7#rd" target="_blank">交一友结一缘</a></div>
+            <div class="post-desc">真正的幸福，就是：身上无病、心中无事、身边有人...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967726&idx=2&sn=63b83b49c1ee313079e7192429293aa0&chksm=73ee40194499c90f9ffa825e9de865e01e40080247e742a3ddee2de6ff76d34ebd64aa456bc7#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967726&idx=3&sn=6c50c04a0b1b24847967c61165e34dce&chksm=73ee40194499c90fde5ba7ff10a0487ccaf6ed5098ff0031ba57a85d4b9091a59850009f64ec#rd" target="_blank">吃亏的人，反而吃不了亏</a></div>
+            <div class="post-desc">与人相处，真心是基础，让步是风度...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967726&idx=3&sn=6c50c04a0b1b24847967c61165e34dce&chksm=73ee40194499c90fde5ba7ff10a0487ccaf6ed5098ff0031ba57a85d4b9091a59850009f64ec#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967726&idx=4&sn=216109310731838ca61767103e614eca&chksm=73ee40194499c90f5ee9049a1843da0955d58f1f6368bd7d4ebd3dfc7b523f4768ffcc24da82#rd" target="_blank">你好，旧时光</a></div>
+            <div class="post-desc">相识，是上天精心的安排，珍惜，因为今生不会重来...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967726&idx=4&sn=216109310731838ca61767103e614eca&chksm=73ee40194499c90f5ee9049a1843da0955d58f1f6368bd7d4ebd3dfc7b523f4768ffcc24da82#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967690&idx=1&sn=50accdb4f2a32797655f9b705475a694&chksm=73ee403d4499c92bb004198babb8c1a39d2b3fe75486ff1111cb1a4dd17e8d7463f9014013a5#rd" target="_blank">想要收获，就得播种</a></div>
+            <div class="post-desc">在生活中不能太软弱，每一个人都有强大的理由...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967690&idx=1&sn=50accdb4f2a32797655f9b705475a694&chksm=73ee403d4499c92bb004198babb8c1a39d2b3fe75486ff1111cb1a4dd17e8d7463f9014013a5#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967690&idx=2&sn=ef6cee98e57c51cc3b28c6a351fcd4c2&chksm=73ee403d4499c92b75d4e5f28c60424a729f6e56002749f2be5bbeda4fdf054de8e390c229d4#rd" target="_blank">不要和愚蠢硬碰硬</a></div>
+            <div class="post-desc">当遭遇一些愚蠢的挑衅和下作的手段时，没必要睚眦必报...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967690&idx=2&sn=ef6cee98e57c51cc3b28c6a351fcd4c2&chksm=73ee403d4499c92b75d4e5f28c60424a729f6e56002749f2be5bbeda4fdf054de8e390c229d4#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967690&idx=3&sn=ac53d39fde0d99d5c465c889dfbe477d&chksm=73ee403d4499c92b29d61a70c67b8f96111608af280edd1aebb2974147140f51546aabe21061#rd" target="_blank">六不说</a></div>
+            <div class="post-desc">曾国藩言："行事不可任心，说话不可任口"...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967690&idx=3&sn=ac53d39fde0d99d5c465c889dfbe477d&chksm=73ee403d4499c92b29d61a70c67b8f96111608af280edd1aebb2974147140f51546aabe21061#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967690&idx=4&sn=4b92cf3f72b51fb7bac0073c9d51d958&chksm=73ee403d4499c92bfb59fd4c62fb4f2de900d1c4d348a98a3c5796f6f7fd9e8c3b5500d1c221#rd" target="_blank">来日，并不方长</a></div>
+            <div class="post-desc">这个世上，最重要的是活在当下，最宝贵的是抓住机会...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967690&idx=4&sn=4b92cf3f72b51fb7bac0073c9d51d958&chksm=73ee403d4499c92bfb59fd4c62fb4f2de900d1c4d348a98a3c5796f6f7fd9e8c3b5500d1c221#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967660&idx=1&sn=06b28f61fbbeb4112301fab9806c6cee&chksm=73ee405b4499c94da43e3dd8d788ce8edf269c6fd2ccbc584d4e981414c7e71bd2cff1fd8c5c#rd" target="_blank">大器晚成</a></div>
+            <div class="post-desc">加油，别怕，只有熬过所有的苦，你才能变成厉害的人！</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967660&idx=1&sn=06b28f61fbbeb4112301fab9806c6cee&chksm=73ee405b4499c94da43e3dd8d788ce8edf269c6fd2ccbc584d4e981414c7e71bd2cff1fd8c5c#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967660&idx=2&sn=5ea632dad0d58cb44324ccb1298a511c&chksm=73ee405b4499c94db7a4e6f41e000f7dcdd71d5423db795c92be0786d1645824a16cc75c4fc5#rd" target="_blank">只有这样可以看清一个人</a></div>
+            <div class="post-desc">有这样一句话：一个人的外在，决定了是否想了解他的内心...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967660&idx=2&sn=5ea632dad0d58cb44324ccb1298a511c&chksm=73ee405b4499c94db7a4e6f41e000f7dcdd71d5423db795c92be0786d1645824a16cc75c4fc5#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967660&idx=3&sn=2c89b3f23b879627b5feab7aa23ef10a&chksm=73ee405b4499c94dc45a3bfe23b2803488358f494929c83d9227c3055ffe6c70ddf3f53576dd#rd" target="_blank">我就是这样一个人</a></div>
+            <div class="post-desc">我就是这样的一个人，善良，但是有智商，心软，但是有底线...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967660&idx=3&sn=2c89b3f23b879627b5feab7aa23ef10a&chksm=73ee405b4499c94dc45a3bfe23b2803488358f494929c83d9227c3055ffe6c70ddf3f53576dd#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967660&idx=4&sn=ae1b0ca6dbb9dc69e22c47b0f47631bf&chksm=73ee405b4499c94d8278d96048152c28d4944c6d64da362b8273db65f9aca572863475b6444d#rd" target="_blank">一切随缘吧</a></div>
+            <div class="post-desc">如果可以看淡，就不会心烦意乱，如果可以放下，就不会难过心寒...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967660&idx=4&sn=ae1b0ca6dbb9dc69e22c47b0f47631bf&chksm=73ee405b4499c94d8278d96048152c28d4944c6d64da362b8273db65f9aca572863475b6444d#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967640&idx=1&sn=4bca1f7ad6cced72ddd05060a1e5269b&chksm=73ee406f4499c9791d650b9c58de9acab902899cba53e8490649fca6302cb7e6849bbd60b227#rd" target="_blank">男人喜欢女人这样子</a></div>
+            <div class="post-desc">没有男人喜欢身材走样，太过肥胖的女人...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967640&idx=1&sn=4bca1f7ad6cced72ddd05060a1e5269b&chksm=73ee406f4499c9791d650b9c58de9acab902899cba53e8490649fca6302cb7e6849bbd60b227#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967640&idx=2&sn=5ae546b4778fd7164f66e0e1d1eb51f6&chksm=73ee406f4499c9799148f1ef61823b2351693f8b73f26e55b43bcf81415ba3f97d45d5f0d414#rd" target="_blank">沟通，才会懂得</a></div>
+            <div class="post-desc">沟通应该是两个人走在一起的第一步，而不该最后一步...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967640&idx=2&sn=5ae546b4778fd7164f66e0e1d1eb51f6&chksm=73ee406f4499c9799148f1ef61823b2351693f8b73f26e55b43bcf81415ba3f97d45d5f0d414#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967640&idx=3&sn=79b05161f584792a2a347fa72b428f39&chksm=73ee406f4499c9798058ff2a12998b7a1999c5b4576b36e359510f3a39742f44cb84a95a4628#rd" target="_blank">时间告诉我...</a></div>
+            <div class="post-desc">我问时间：怎样才能留住你？时间告诉我：人生是一个哭着走来，笑着离去的过程...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967640&idx=3&sn=79b05161f584792a2a347fa72b428f39&chksm=73ee406f4499c9798058ff2a12998b7a1999c5b4576b36e359510f3a39742f44cb84a95a4628#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967640&idx=4&sn=792896975ef9d89f18b83e65a9cb3b0e&chksm=73ee406f4499c979050d06e0ffe3af7bc2399c0ac41f05fee10cf73115b569752d21e4cc0833#rd" target="_blank">静静的守望这份爱</a></div>
+            <div class="post-desc">因为懂得，所以珍惜；穿行，飞度的光阴...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967640&idx=4&sn=792896975ef9d89f18b83e65a9cb3b0e&chksm=73ee406f4499c979050d06e0ffe3af7bc2399c0ac41f05fee10cf73115b569752d21e4cc0833#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967602&idx=1&sn=75db1b129cfa6f972c2bf97dc333369c&chksm=73ee41854499c89371868c6663faaeb71d31b5c2bbd12f56c7392cbdbcfbb5ac84522f83583f#rd" target="_blank">没有一个酒宴值得你拼命喝</a></div>
+            <div class="post-desc">这些局中人和看客，活生生将一场酒局变成了斗兽场...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967602&idx=1&sn=75db1b129cfa6f972c2bf97dc333369c&chksm=73ee41854499c89371868c6663faaeb71d31b5c2bbd12f56c7392cbdbcfbb5ac84522f83583f#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967602&idx=2&sn=387c2b85aebfaacb8efe542993d50ec6&chksm=73ee41854499c8935fbb0ecc463d6beea59393a990aa857ca7307ecc31a2ba40a2b4e5427ae2#rd" target="_blank">清秋落叶</a></div>
+            <div class="post-desc">人的成熟不是年龄，而是心态。心的成熟不是遇到的事情多，而是对待事情的态度...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967602&idx=2&sn=387c2b85aebfaacb8efe542993d50ec6&chksm=73ee41854499c8935fbb0ecc463d6beea59393a990aa857ca7307ecc31a2ba40a2b4e5427ae2#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967602&idx=3&sn=2c4165ce3469c4134403ce96f375bbcf&chksm=73ee41854499c893a8ba4ad5ebc344086ca0f949d291da04633a83636db1b7c99017d109b365#rd" target="_blank">逆境中要善待自己</a></div>
+            <div class="post-desc">俯视者狂，高高在上盛气凌人，藐小了对方；仰望者弱，诚惶诚恐顶礼膜拜...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967602&idx=3&sn=2c4165ce3469c4134403ce96f375bbcf&chksm=73ee41854499c893a8ba4ad5ebc344086ca0f949d291da04633a83636db1b7c99017d109b365#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div class="post-card">
+            <div class="post-title"><a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967602&idx=4&sn=ba46b6417a748182846977d13f7cbe63&chksm=73ee41854499c89324f82f6da6c36fd21ee18c2a1efe56bacee27e9e0df5ffaaf58910ebd474#rd" target="_blank">你真我就真，你假我转身</a></div>
+            <div class="post-desc">在这世上，有些人值得你对他好，有些人不值得。并非每个人都懂得感恩...</div>
+            <a href="http://mp.weixin.qq.com/s?__biz=MzI4NTA4OTMwNA==&mid=501967602&idx=4&sn=ba46b6417a748182846977d13f7cbe63&chksm=73ee41854499c89324f82f6da6c36fd21ee18c2a1efe56bacee27e9e0df5ffaaf58910ebd474#rd" target="_blank" class="read-more">阅读全文 →</a>
+        </div>
+        
+        <div style="text-align: center; margin-top: 2rem; color: var(--text-light);">
+            <p>📱 更多精彩内容，请关注公众号「AI驱动新生活」</p>
         </div>
     </main>
     
     <footer>
-        <p>© 2026 智能生活圈 Smart Life Circle · AI工具导航与实用技巧分享</p>
+        <p>© 2026 智能生活圈 · 公众号「AI驱动新生活」</p>
     </footer>
 </body>
 </html>
