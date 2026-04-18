@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ .Site.Title }}</title>
+    <title>AI工具导航 - 智能生活圈</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -18,11 +18,7 @@
             --shadow: 0 4px 20px rgba(30, 136, 229, 0.1);
         }
         
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
             font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -31,7 +27,6 @@
             line-height: 1.6;
         }
         
-        /* Header */
         header {
             background: var(--white);
             box-shadow: var(--shadow);
@@ -58,15 +53,9 @@
             color: var(--accent);
         }
         
-        .logo-icon {
-            font-size: 2rem;
-        }
+        .logo-icon { font-size: 2rem; }
         
-        nav ul {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
+        nav ul { display: flex; gap: 2rem; list-style: none; }
         
         nav a {
             text-decoration: none;
@@ -82,30 +71,17 @@
             background: var(--primary-bg);
         }
         
-        /* Hero */
         .hero {
             background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
             color: var(--white);
-            padding: 4rem 2rem;
+            padding: 3rem 2rem;
             text-align: center;
         }
         
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
+        .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        .hero p { font-size: 1.1rem; opacity: 0.9; }
         
-        .hero p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-        
-        /* Main */
-        main {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 3rem 2rem;
-        }
+        main { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; }
         
         .section-title {
             font-size: 1.8rem;
@@ -116,7 +92,6 @@
             display: inline-block;
         }
         
-        /* Tools Grid */
         .tools-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -137,23 +112,9 @@
             box-shadow: 0 8px 30px rgba(30, 136, 229, 0.2);
         }
         
-        .tool-icon {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .tool-name {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-        }
-        
-        .tool-desc {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
-        }
+        .tool-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .tool-name { font-size: 1.2rem; font-weight: 600; color: var(--accent); margin-bottom: 0.5rem; }
+        .tool-desc { color: var(--text-light); font-size: 0.95rem; margin-bottom: 1rem; }
         
         .tool-link {
             display: inline-block;
@@ -166,11 +127,8 @@
             transition: background 0.3s ease;
         }
         
-        .tool-link:hover {
-            background: var(--accent-dark);
-        }
+        .tool-link:hover { background: var(--accent-dark); }
         
-        /* Category Tags */
         .category-tag {
             display: inline-block;
             background: var(--primary-bg);
@@ -181,7 +139,6 @@
             margin-bottom: 0.8rem;
         }
         
-        /* Footer */
         footer {
             background: var(--text-dark);
             color: var(--white);
@@ -190,39 +147,13 @@
             margin-top: 3rem;
         }
         
-        footer p {
-            opacity: 0.8;
-        }
+        footer p { opacity: 0.8; }
         
-        /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        /* Responsive */
         @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1rem;
-            }
-            
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-            
-            .tools-grid {
-                grid-template-columns: 1fr;
-            }
+            .header-container { flex-direction: column; gap: 1rem; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+            .hero h1 { font-size: 1.5rem; }
+            .tools-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -235,8 +166,8 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="/" class="active">首页</a></li>
-                    <li><a href="/ai-tools/">AI工具导航</a></li>
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/ai-tools/" class="active">AI工具导航</a></li>
                     <li><a href="/posts/">AI教程</a></li>
                     <li><a href="/about/">关于我们</a></li>
                 </ul>
@@ -245,12 +176,13 @@
     </header>
     
     <section class="hero">
-        <h1>Smart Life Circle</h1>
-        <p>发现最新AI工具，提升工作与生活效率</p>
+        <h1>AI工具导航</h1>
+        <p>精选热门AI工具，在线体验链接</p>
     </section>
     
     <main>
-        <h2 class="section-title">🔥 AI工具导航</h2>
+        <!-- 对话助手 -->
+        <h2 class="section-title">💬 对话助手</h2>
         <div class="tools-grid">
             <div class="tool-card">
                 <span class="category-tag">对话助手</span>
@@ -259,7 +191,6 @@
                 <div class="tool-desc">OpenAI开发的AI对话助手，支持多轮对话、代码编写、文章创作</div>
                 <a href="https://chat.openai.com" target="_blank" class="tool-link">前往体验 →</a>
             </div>
-            
             <div class="tool-card">
                 <span class="category-tag">对话助手</span>
                 <div class="tool-icon">💬</div>
@@ -267,31 +198,58 @@
                 <div class="tool-desc">Anthropic开发的AI助手，擅长分析、写作、长文本处理</div>
                 <a href="https://claude.ai" target="_blank" class="tool-link">前往体验 →</a>
             </div>
-            
+            <div class="tool-card">
+                <span class="category-tag">对话助手</span>
+                <div class="tool-icon">🌐</div>
+                <div class="tool-name">文心一言</div>
+                <div class="tool-desc">百度开发的国产AI大模型，中文理解能力强</div>
+                <a href="https://yiyan.baidu.com" target="_blank" class="tool-link">前往体验 →</a>
+            </div>
+            <div class="tool-card">
+                <span class="category-tag">对话助手</span>
+                <div class="tool-icon">通义</div>
+                <div class="tool-name">通义千问</div>
+                <div class="tool-desc">阿里云开发的AI助手，支持多轮对话和创意生成</div>
+                <a href="https://tongyi.aliyun.com" target="_blank" class="tool-link">前往体验 →</a>
+            </div>
+        </div>
+        
+        <!-- 图像生成 -->
+        <h2 class="section-title" style="margin-top: 3rem;">🎨 图像生成</h2>
+        <div class="tools-grid">
             <div class="tool-card">
                 <span class="category-tag">图像生成</span>
-                <div class="tool-icon">🎨</div>
+                <div class="tool-icon">🖼️</div>
                 <div class="tool-name">Midjourney</div>
                 <div class="tool-desc">强大的AI图像生成工具，输入文字描述即可生成精美图片</div>
                 <a href="https://www.midjourney.com" target="_blank" class="tool-link">前往体验 →</a>
             </div>
-            
             <div class="tool-card">
                 <span class="category-tag">图像生成</span>
-                <div class="tool-icon">🖼️</div>
+                <div class="tool-icon">✨</div>
                 <div class="tool-name">Stable Diffusion</div>
                 <div class="tool-desc">开源AI图像生成模型，支持本地部署和自定义训练</div>
                 <a href="https://stability.ai" target="_blank" class="tool-link">前往体验 →</a>
             </div>
-            
+            <div class="tool-card">
+                <span class="category-tag">图像生成</span>
+                <div class="tool-icon">🎭</div>
+                <div class="tool-name">DALL-E</div>
+                <div class="tool-desc">OpenAI开发的AI图像生成工具，创意无限</div>
+                <a href="https://openai.com/dall-e-3" target="_blank" class="tool-link">前往体验 →</a>
+            </div>
+        </div>
+        
+        <!-- 办公辅助 -->
+        <h2 class="section-title" style="margin-top: 3rem;">📄 办公辅助</h2>
+        <div class="tools-grid">
             <div class="tool-card">
                 <span class="category-tag">办公辅助</span>
-                <div class="tool-icon">📄</div>
+                <div class="tool-icon">📝</div>
                 <div class="tool-name">Notion AI</div>
                 <div class="tool-desc">集成在Notion中的AI助手，帮你整理笔记、写文章、做总结</div>
                 <a href="https://notion.so" target="_blank" class="tool-link">前往体验 →</a>
             </div>
-            
             <div class="tool-card">
                 <span class="category-tag">办公辅助</span>
                 <div class="tool-icon">📊</div>
@@ -299,7 +257,18 @@
                 <div class="tool-desc">AI演示文稿生成工具，输入大纲自动生成精美PPT</div>
                 <a href="https://gamma.app" target="_blank" class="tool-link">前往体验 →</a>
             </div>
-            
+            <div class="tool-card">
+                <span class="category-tag">办公辅助</span>
+                <div class="tool-icon">📝</div>
+                <div class="tool-name">WPS AI</div>
+                <div class="tool-desc">金山办公AI助手，文档处理智能升级</div>
+                <a href="https://ai.wps.cn" target="_blank" class="tool-link">前往体验 →</a>
+            </div>
+        </div>
+        
+        <!-- 视频制作 -->
+        <h2 class="section-title" style="margin-top: 3rem;">🎬 视频制作</h2>
+        <div class="tools-grid">
             <div class="tool-card">
                 <span class="category-tag">视频制作</span>
                 <div class="tool-icon">🎬</div>
@@ -307,13 +276,38 @@
                 <div class="tool-desc">AI视频编辑和生成平台，支持视频抠像、特效生成</div>
                 <a href="https://runwayml.com" target="_blank" class="tool-link">前往体验 →</a>
             </div>
-            
+            <div class="tool-card">
+                <span class="category-tag">视频制作</span>
+                <div class="tool-icon">🎥</div>
+                <div class="tool-name">Pika</div>
+                <div class="tool-desc">AI视频生成工具，支持文字转视频</div>
+                <a href="https://pika.art" target="_blank" class="tool-link">前往体验 →</a>
+            </div>
+            <div class="tool-card">
+                <span class="category-tag">视频制作</span>
+                <div class="tool-icon">📹</div>
+                <div class="tool-name">剪映</div>
+                <div class="tool-desc">字节跳动出品的视频编辑软件，内置AI功能</div>
+                <a href="https://www.jianying.com" target="_blank" class="tool-link">前往体验 →</a>
+            </div>
+        </div>
+        
+        <!-- 编程助手 -->
+        <h2 class="section-title" style="margin-top: 3rem;">💻 编程助手</h2>
+        <div class="tools-grid">
             <div class="tool-card">
                 <span class="category-tag">编程助手</span>
-                <div class="tool-icon">💻</div>
+                <div class="tool-icon">⌨️</div>
                 <div class="tool-name">GitHub Copilot</div>
                 <div class="tool-desc">AI代码补全助手，支持多种编程语言，提升编码效率</div>
                 <a href="https://github.com/features/copilot" target="_blank" class="tool-link">前往体验 →</a>
+            </div>
+            <div class="tool-card">
+                <span class="category-tag">编程助手</span>
+                <div class="tool-icon">🔧</div>
+                <div class="tool-name">Cursor</div>
+                <div class="tool-desc">基于AI的代码编辑器，支持智能补全和代码解释</div>
+                <a href="https://cursor.sh" target="_blank" class="tool-link">前往体验 →</a>
             </div>
         </div>
     </main>

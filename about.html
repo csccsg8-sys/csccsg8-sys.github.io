@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 智能生活圈</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-bg: #E8F4FF;
+            --accent: #1E88E5;
+            --accent-dark: #1565C0;
+            --text-dark: #1a1a2e;
+            --text-light: #4a4a6a;
+            --white: #ffffff;
+            --card-bg: #ffffff;
+            --shadow: 0 4px 20px rgba(30, 136, 229, 0.1);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--primary-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        
+        .logo-icon { font-size: 2rem; }
+        
+        nav ul { display: flex; gap: 2rem; list-style: none; }
+        
+        nav a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        nav a:hover, nav a.active {
+            color: var(--accent);
+            background: var(--primary-bg);
+        }
+        
+        .hero {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: var(--white);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+        
+        main { max-width: 800px; margin: 0 auto; padding: 3rem 2rem; }
+        
+        .about-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .about-card h2 {
+            color: var(--accent);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .about-card p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+        
+        .about-card ul {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+        
+        .about-card li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid var(--primary-bg);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .about-card li:last-child { border-bottom: none; }
+        
+        .about-card li span { font-size: 1.3rem; }
+        
+        .wechat-box {
+            background: var(--primary-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .wechat-box h3 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+        
+        .wechat-box p {
+            margin-bottom: 0;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+        
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        footer p { opacity: 0.8; }
+        
+        @media (max-width: 768px) {
+            .header-container { flex-direction: column; gap: 1rem; }
+            nav ul { flex-wrap: wrap; justify-content: center; gap: 1rem; }
+            .hero h1 { font-size: 1.5rem; }
+            .about-card { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-icon">🎯</span>
+                <span>智能生活圈</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">首页</a></li>
+                    <li><a href="/ai-tools/">AI工具导航</a></li>
+                    <li><a href="/posts/">AI教程</a></li>
+                    <li><a href="/about/" class="active">关于我们</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <h1>关于我们</h1>
+    </section>
+    
+    <main>
+        <div class="about-card">
+            <h2>🎯 智能生活圈</h2>
+            <p>
+                Smart Life Circle（智能生活圈）是一个专注于AI工具导航与实用技巧分享的平台。
+                我们致力于发掘和推荐最实用的AI工具，帮助更多人享受人工智能带来的便利。
+            </p>
+            
+            <h2>📌 我们的使命</h2>
+            <p>
+                让每个人都能轻松使用AI工具，提升工作与生活效率。无论是AI初学者还是资深用户，
+                都能在这里找到有价值的内容。
+            </p>
+            
+            <h2>🔍 我们提供</h2>
+            <ul>
+                <li><span>🤖</span> 最新AI工具导航与在线体验入口</li>
+                <li><span>📚</span> 实用的AI使用教程和技巧</li>
+                <li><span>💡</span> AI应用场景分析与案例分享</li>
+                <li><span>🎮</span> 有趣的AI小游戏体验</li>
+            </ul>
+            
+            <div class="wechat-box">
+                <h3>📱 关注公众号</h3>
+                <p>《AI驱动新生活》</p>
+                <p style="font-size: 0.9rem; color: var(--text-light); margin-top: 0.5rem;">
+                    获取更多AI技能和使用方法
+                </p>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2026 智能生活圈 Smart Life Circle · AI工具导航与实用技巧分享</p>
+    </footer>
+</body>
+</html>

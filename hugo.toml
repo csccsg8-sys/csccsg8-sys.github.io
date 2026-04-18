@@ -1,0 +1,40 @@
+baseURL = 'https://196398.xyz'
+languageCode = 'zh-CN'
+title = '智能生活圈'
+theme = 'Paper'
+
+[params]
+  author = '智能生活圈'
+  description = 'AI工具导航与实用技巧分享平台'
+  keywords = ['AI', '人工智能', 'AI工具', '智能助手', 'ChatGPT', 'Claude']
+  customThemeColor = '#E8F4FF'
+  customAccentColor = '#1E88E5'
+  
+[params.paper]
+  logo = "🎯"
+  footerLogo = "智能生活圈"
+  
+[navigation]
+  [[navigation.item]]
+    name = '首页'
+    url = '/'
+    icon = 'home'
+  [[navigation.item]]
+    name = 'AI工具导航'
+    url = '/ai-tools/'
+    icon = 'rocket'
+  [[navigation.item]]
+    name = 'AI教程'
+    url = '/posts/'
+    icon = 'book'
+  [[navigation.item]]
+    name = '关于我们'
+    url = '/about/'
+    icon = 'user'
+
+[permalinks]
+  posts = '/:year/:month/:slug/'
+
+[taxonomies]
+  tag = 'tags'
+  category = 'categories'
